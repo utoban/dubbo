@@ -23,7 +23,8 @@ limitations under the License.
 
     <dubbo:application name="generic-consumer"/>
 
-    <dubbo:registry address="multicast://224.5.6.7:1234"/>
+   <!-- <dubbo:registry address="multicast://224.5.6.7:1234"/>-->
+    <dubbo:registry address="127.0.0.1:2181" protocol="zookeeper" />
 
     <dubbo:reference id="userservice" interface="com.alibaba.dubbo.examples.generic.api.IUserService"/>
 
